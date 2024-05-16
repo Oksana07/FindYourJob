@@ -1,0 +1,56 @@
+.hero {
+  padding-top: 75px;
+  padding-bottom: 56px;
+}
+
+.hero > .container {
+  display: flex;
+}
+
+.hero-title {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 44px;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.hero-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--text-primary);
+  padding-bottom: 15px;
+}
+
+.hero-box {
+  display: flex;
+  gap: 89px;
+  margin-bottom: 35px;
+}
+
+.hero-span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--inputs-grey);
+}
+
+.hero-btn {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--inputs-grey);
+  border: 1px solid var(--inputs-grey);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--buttons-primary);
+    color: var(--inputs-light);
+  }
+}
