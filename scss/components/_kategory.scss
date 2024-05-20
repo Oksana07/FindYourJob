@@ -26,15 +26,17 @@
     padding: 35px 55px;
     width: 166px;
     height: 128px;
+    cursor: pointer;
 
-    &:hover,
-      &:focus {
-        background-color: var(--buttons-primary);
-        fill: var(--inputs-light);
-        color: var(--inputs-light);
-      
 }
+
+.kategory-list>.item:hover,
+.kategory-list>.item:focus {
+      background-color: var(--buttons-primary);
+      fill: var(--inputs-light);
+      color: white;
 }
+
 
 .kategory-svg{
 width: 24px;

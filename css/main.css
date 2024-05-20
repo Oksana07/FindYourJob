@@ -42,11 +42,21 @@ address {
 }
 
 .container {
-  width: 1176px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+@media screen and (min-width: 1176px) {
+  .container {
+    max-width: 1176px;
+  }
 }
 
 .header {
@@ -59,9 +69,16 @@ address {
   align-items: center;
 }
 
-.menu-list {
-  display: flex;
-  gap: 30px;
+@media screen and (min-width: 320px) {
+  .menu-list {
+    display: none;
+  }
+}
+@media screen and (min-width: 1176px) {
+  .menu-list {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .menu-link {
@@ -79,35 +96,64 @@ address {
   display: flex;
 }
 
-.header-enter {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--text-primary);
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+@media screen and (min-width: 320px) {
+  .header-enter {
+    display: none;
+  }
 }
-.header-enter:hover, .header-enter:focus {
-  color: var(--buttons-primary);
+@media screen and (min-width: 1176px) {
+  .header-enter {
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-primary);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .header-enter:hover, .header-enter:focus {
+    color: var(--buttons-primary);
+  }
 }
 
-.header-registration {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--inputs-light);
-  border: none;
-  display: flex;
-  justify-content: center;
-  border-radius: 5px;
-  padding: 15px 30px;
-  background: var(--buttons-primary);
+@media screen and (min-width: 320px) {
+  .header-registration {
+    display: none;
+  }
 }
-.header-registration:hover, .header-registration:focus {
-  color: var(--buttons-primary);
-  background-color: var(--inputs-light);
-  border: 1px solid gray;
+@media screen and (min-width: 1176px) {
+  .header-registration {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--inputs-light);
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 15px 30px;
+    background: var(--buttons-primary);
+  }
+  .header-registration:hover, .header-registration:focus {
+    color: var(--buttons-primary);
+    background-color: var(--inputs-light);
+    border: 1px solid gray;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .mobil-btn {
+    display: block;
+    position: absolute;
+    top: 45px;
+    right: 15px;
+  }
+}
+@media screen and (min-width: 1176px) {
+  .mobil-btn {
+    display: none;
+  }
 }
 
 .hero {
@@ -118,22 +164,58 @@ address {
 .hero > .container {
   display: flex;
 }
+@media screen and (min-width: 320px) {
+  .hero > .container {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1176px) {
+  .hero > .container {
+    flex-direction: row;
+  }
+}
 
 .hero-title {
   font-family: var(--font-family);
   font-weight: 900;
-  font-size: 44px;
   color: var(--text-primary);
-  margin-bottom: 15px;
+}
+@media screen and (min-width: 320px) {
+  .hero-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1176px) {
+  .hero-title {
+    margin-bottom: 15px;
+    font-size: 44px;
+    text-align: start;
+    width: 530px;
+  }
 }
 
 .hero-text {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 18px;
   line-height: 140%;
   color: var(--text-primary);
-  padding-bottom: 15px;
+}
+@media screen and (min-width: 320px) {
+  .hero-text {
+    font-size: 16px;
+    margin-bottom: 29px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1176px) {
+  .hero-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: start;
+    width: 530px;
+  }
 }
 
 .hero-box {
@@ -192,11 +274,14 @@ address {
   padding: 35px 55px;
   width: 166px;
   height: 128px;
+  cursor: pointer;
 }
-.kategory-list > .item:hover, .kategory-list > .item:focus {
+
+.kategory-list > .item:hover,
+.kategory-list > .item:focus {
   background-color: var(--buttons-primary);
   fill: var(--inputs-light);
-  color: var(--inputs-light);
+  color: white;
 }
 
 .kategory-svg {

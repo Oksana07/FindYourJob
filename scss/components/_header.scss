@@ -9,8 +9,14 @@
 }
 
 .menu-list {
-  display: flex;
-  gap: 30px;
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1176px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .menu-link {
@@ -25,43 +31,70 @@
   }
 }
 
-.header-box{
+.header-box {
   margin-left: 40px;
   display: flex;
 }
 
 .header-enter {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--text-primary);
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
 
-  &:hover,
-  &:focus {
-    color: var(--buttons-primary);
+  @media screen and (min-width: 1176px) {
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-primary);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--buttons-primary);
+    }
   }
 }
 
 .header-registration {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--inputs-light);
-  border: none;
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
 
-  border-radius: 5px;
-  padding: 15px 30px;
-  background: var(--buttons-primary);
+  @media screen and (min-width: 1176px) {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--inputs-light);
+    border: none;
+    display: flex;
+    justify-content: center;
 
-  &:hover,
-  &:focus {
-    color: var(--buttons-primary);
-    background-color: var(--inputs-light);
-    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 15px 30px;
+    background: var(--buttons-primary);
+
+    &:hover,
+    &:focus {
+      color: var(--buttons-primary);
+      background-color: var(--inputs-light);
+      border: 1px solid gray;
+    }
+  }
+}
+
+//мобільне меню
+.mobil-btn {
+  @media screen and (min-width: 320px) {
+    display: block;
+    position: absolute;
+    top: 45px;
+    right: 15px;
+  }
+
+  @media screen and (min-width: 1176px) {
+    display: none;
   }
 }

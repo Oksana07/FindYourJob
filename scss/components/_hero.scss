@@ -4,24 +4,55 @@
 }
 
 .hero > .container {
-  display: flex;
+display: flex;
+    @media screen and (min-width: 320px) {
+       flex-direction: column;
+      }
+    
+      @media screen and (min-width: 1176px) {
+        flex-direction: row; 
+      }
 }
 
 .hero-title {
   font-family: var(--font-family);
   font-weight: 900;
-  font-size: 44px;
   color: var(--text-primary);
-  margin-bottom: 15px;
+  
+    @media screen and (min-width: 320px) {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+      }
+    
+      @media screen and (min-width: 1176px) {
+      margin-bottom: 15px;
+      font-size: 44px;
+      text-align: start;
+      width: 530px;
+      }
 }
 
 .hero-text {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 18px;
+  
   line-height: 140%;
   color: var(--text-primary);
-  padding-bottom: 15px;
+  
+
+  @media screen and (min-width: 320px) {
+    font-size: 16px;
+    margin-bottom: 29px;
+    text-align: center;
+    }
+  
+    @media screen and (min-width: 1176px) {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: start;
+    width: 530px;
+    }
 }
 
 .hero-box {
